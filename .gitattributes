@@ -1,0 +1,7 @@
+* text=auto
+
+*.py linguist-language=Python
+*.md linguist-language=Markdown
+
+README.md linguist-documentation
+NOTICE.txt linguist-documentation
