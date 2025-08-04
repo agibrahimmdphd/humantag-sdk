@@ -1,6 +1,6 @@
 # HumanTag SDK v1.3
 This SDK provides biometric watermarking + verification...
-## 📜 Licensing & Patent Status
+## Licensing & Patent Status
 
 This project is released under the **Apache License 2.0**.
 
