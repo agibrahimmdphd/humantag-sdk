@@ -1,13 +1,1 @@
-PATENT PENDING – FOR DEMO USE ONLY
-
-This software is part of the HumanTag biometric authentication system and is protected by one or more pending U.S. patent applications.
-
-This SDK is provided for demonstration, evaluation, and non-commercial research purposes only.
-
-Unauthorized reproduction, modification, or distribution for commercial use without explicit written permission from the inventor is strictly prohibited.
-
-For licensing inquiries, please contact:
-Abdulrahman Ibrahim
-Email: ag.ibrahim.mdphd@gmail.com
-
-© 2024 HumanTag. All rights reserved.
+Patent Pending. HumanTag™ watermark trust layer.
