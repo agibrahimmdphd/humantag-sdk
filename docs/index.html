@@ -15,9 +15,10 @@
             background-color: #007bff; color: white; border: none; padding: 12px 24px;
             text-decoration: none; font-size: 16px; margin: 5px; border-radius: 6px;
         }
-        .content { padding: 40px 20px; max-width: 800px; margin: auto; }
+        .content { padding: 40px 20px; max-width: 900px; margin: auto; }
         h2 { color: #031e3e; border-bottom: 2px solid #eee; padding-bottom: 8px; }
         pre { background-color: #eee; padding: 10px; overflow-x: auto; }
+        img { border: 1px solid #ccc; margin: 20px 0; border-radius: 6px; max-width: 100%; }
         footer { text-align: center; padding: 20px; font-size: 14px; color: #888; }
     </style>
 </head>
@@ -57,6 +58,19 @@
     <pre><code>git clone https://github.com/agibrahimmdphd/humantag-sdk.git
 cd humantag-sdk
 python3 examples/demo_full_pipeline_verbose.py</code></pre>
+
+    <h2>🖼 Live Demo Outputs</h2>
+    <img src="screenshots/biometric_signal_preview.png" alt="Biometric Signal Preview">
+    <p>Sample biometric signals (PPG, GSR, EKG)</p>
+
+    <img src="screenshots/verified_output_cli.png" alt="Verification Result CLI">
+    <p>Command-line verification result: <strong>✅ Verified = True</strong></p>
+
+    <img src="screenshots/entropy_chart_sample.png" alt="Entropy Distribution Chart">
+    <p>Entropy score distribution showing real vs. spoofed biometric data</p>
+
+    <img src="screenshots/watermark_payload_structure.png" alt="Watermark Payload JSON">
+    <p>Signed biometric watermark payload structure</p>
 
     <h2>📄 License</h2>
     <p>This SDK is open source under the <strong>Apache 2.0 License</strong> and safe for enterprise and research use.</p>
