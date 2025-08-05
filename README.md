@@ -19,3 +19,22 @@ The HumanTag™ biometric watermarking and real-time verification system is pate
 
 See the full `LICENSE` file and `NOTICE.txt` for legal terms.
 
+## 📊 Entropy Analysis Tools
+
+This SDK includes scientific tooling to evaluate signal entropy:
+
+- `tools/entropy_distribution_simulator.py` – plot real vs. fake entropy
+- `tools/entropy_distribution_simulation.png` – saved plot
+- `tools/entropy_benchmark_plan.md` – research plan for validating threshold
+
+Use this for clinical calibration, regulatory support, or investor demos.
+
+## 🧪 Real-Time Verification Logic
+
+The `VerificationInterface.py` module now includes:
+- Entropy gating (default threshold: `0.3`)
+- Spoof detection warnings
+- Configurable parameters
+
+✅ Output: `✅ Verified = True` or spoof alert
+
