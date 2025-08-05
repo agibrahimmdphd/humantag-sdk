@@ -7,10 +7,25 @@
   <style>
     body { font-family: Arial, sans-serif; max-width: 900px; margin: 0 auto; padding: 2em; background: #fefefe; color: #333; }
     h1, h2 { color: #1a73e8; }
-    h3 { margin-top: 1.5em; }
     img { max-width: 100%; margin: 1em 0; border: 1px solid #ccc; }
     pre { background: #f4f4f4; padding: 1em; overflow-x: auto; }
     ul { padding-left: 1.2em; }
+    .button-row {
+      margin-top: 2em;
+    }
+    .button-row a {
+      display: inline-block;
+      background: #1a73e8;
+      color: white;
+      padding: 0.7em 1.5em;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
+      margin-right: 1em;
+    }
+    .button-row a.sponsor {
+      background: #ff5f5f;
+    }
     footer { font-size: 0.9em; margin-top: 4em; color: #666; text-align: center; }
   </style>
 </head>
@@ -18,6 +33,11 @@
   <h1>HumanTag SDK v1.3.2</h1>
   <p><strong>Biometric Watermarking & Cryptographic Media Verification SDK</strong></p>
   <p>Apache 2.0 Licensed · Patent Pending</p>
+
+  <div class="button-row">
+    <a href="https://ko-fi.com/humantag" target="_blank" class="sponsor">Sponsor on Ko-fi</a>
+    <a href="mailto:ag.ibrahim.mdphd@gmail.com">Contact</a>
+  </div>
 
   <h2>Overview</h2>
   <p>HumanTag is a modular SDK for real-time biometric authentication and media integrity. It embeds cryptographically signed biometric watermarks directly into digital content (video, audio, or metadata) to verify that a real human was present at the moment of recording.</p>
