@@ -3,69 +3,84 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>HumanTag SDK · Biometric Watermarking & Verification</title>
+  <title>HumanTag SDK</title>
   <style>
-    body { font-family: Arial, sans-serif; max-width: 900px; margin: 0 auto; padding: 2em; background: #fefefe; color: #333; }
-    h1, h2 { color: #1a73e8; }
-    img { max-width: 100%; margin: 1em 0; border: 1px solid #ccc; }
-    pre { background: #f4f4f4; padding: 1em; overflow-x: auto; }
-    ul { padding-left: 1.2em; }
-    .button-row {
-      margin-top: 2em;
+    body {
+      font-family: "Segoe UI", sans-serif;
+      margin: 0 auto;
+      padding: 2em;
+      max-width: 880px;
+      background-color: #f9f9f9;
+      color: #333;
     }
-    .button-row a {
+    header {
+      text-align: center;
+      margin-bottom: 2em;
+    }
+    header h1 {
+      font-size: 2.2em;
+      color: #1a73e8;
+    }
+    header p {
+      font-size: 1.1em;
+      color: #555;
+    }
+    nav {
+      text-align: center;
+      margin-bottom: 2em;
+    }
+    nav a {
       display: inline-block;
-      background: #1a73e8;
-      color: white;
-      padding: 0.7em 1.5em;
+      margin: 0.5em;
+      padding: 0.6em 1.2em;
       text-decoration: none;
-      border-radius: 6px;
+      color: white;
+      background-color: #1a73e8;
+      border-radius: 5px;
       font-weight: bold;
-      margin-right: 1em;
     }
-    .button-row a.sponsor {
-      background: #ff5f5f;
+    section {
+      margin-bottom: 2em;
     }
-    footer { font-size: 0.9em; margin-top: 4em; color: #666; text-align: center; }
+    footer {
+      font-size: 0.85em;
+      color: #888;
+      text-align: center;
+      margin-top: 3em;
+    }
   </style>
 </head>
 <body>
-  <h1>HumanTag SDK v1.3.2</h1>
-  <p><strong>Biometric Watermarking & Cryptographic Media Verification SDK</strong></p>
-  <p>Apache 2.0 Licensed · Patent Pending</p>
+  <header>
+    <h1>HumanTag SDK</h1>
+    <p>Biometric Watermarking & Cryptographic Media Verification</p>
+  </header>
 
-  <div class="button-row">
-    <a href="https://ko-fi.com/humantag" target="_blank" class="sponsor">Sponsor on Ko-fi</a>
-    <a href="mailto:ag.ibrahim.mdphd@gmail.com">Contact</a>
-  </div>
+  <nav>
+    <a href="humantag_demo_sandbox.html">Try the Demo Sandbox</a>
+    <a href="https://github.com/agibrahimmdphd/humantag-sdk" target="_blank">View GitHub Repository</a>
+  </nav>
 
-  <h2>Overview</h2>
-  <p>HumanTag is a modular SDK for real-time biometric authentication and media integrity. It embeds cryptographically signed biometric watermarks directly into digital content (video, audio, or metadata) to verify that a real human was present at the moment of recording.</p>
+  <section>
+    <h2>What is HumanTag?</h2>
+    <p>HumanTag ensures authenticated human presence in recorded media using real-time biometric entropy and cryptographic watermarking.</p>
+  </section>
 
-  <h2>Features</h2>
-  <ul>
-    <li>Biometric signal analysis: PPG, GSR, EKG</li>
-    <li>Entropy scoring and spoof resistance</li>
-    <li>Secure signature and payload encryption</li>
-    <li>Watermark embedding and public-key verification</li>
-    <li>CLI tools, SDK modules, and JSON output</li>
-  </ul>
+  <section>
+    <h2>Why It Matters</h2>
+    <p>As generative AI advances, HumanTag provides a verifiable way to confirm that media was captured with a real, live human — not a simulation.</p>
+  </section>
 
-  <h2>How It Works</h2>
-  <img src="assets/screenshots/watermark_verification_summary.png" alt="HumanTag Visual Summary">
-
-  <h2>Usage</h2>
-  <pre>
-git clone https://github.com/agibrahimmdphd/humantag-sdk.git
-cd humantag-sdk
-python3 examples/demo_full_pipeline.py
-  </pre>
-
-  <h2>License</h2>
-  <p>This project is licensed under the Apache License 2.0. See the <a href="https://github.com/agibrahimmdphd/humantag-sdk/blob/main/LICENSE">LICENSE</a> file for details.</p>
+  <section>
+    <h2>Learn More</h2>
+    <ul>
+      <li><a href="docs/API_Spec.md">API Specification</a></li>
+      <li><a href="samples/sample_payload.json">Sample Payload</a></li>
+    </ul>
+  </section>
 
   <footer>
-    &copy; 2025 HumanTag Project · All rights reserved
+    &copy; 2025 HumanTag Project · Patent Pending
   </footer>
 </body>
 </html>
