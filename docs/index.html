@@ -3,82 +3,35 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>HumanTag SDK – Biometric Verification</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>HumanTag SDK Demo Outputs</title>
     <style>
-        body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif; background-color: #f8f9fa; color: #333; }
-        header { background-color: #031e3e; color: white; padding: 60px 20px; text-align: center; }
-        header h1 { margin: 0; font-size: 40px; }
-        header p { font-size: 18px; margin-top: 10px; }
-        .buttons { margin-top: 20px; }
-        .button {
-            background-color: #007bff; color: white; border: none; padding: 12px 24px;
-            text-decoration: none; font-size: 16px; margin: 5px; border-radius: 6px;
-        }
-        .content { padding: 40px 20px; max-width: 900px; margin: auto; }
-        h2 { color: #031e3e; border-bottom: 2px solid #eee; padding-bottom: 8px; }
-        pre { background-color: #eee; padding: 10px; overflow-x: auto; }
-        img { border: 1px solid #ccc; margin: 20px 0; border-radius: 6px; max-width: 100%; }
-        footer { text-align: center; padding: 20px; font-size: 14px; color: #888; }
+        body { font-family: sans-serif; padding: 2rem; background: #f9f9f9; color: #333; }
+        h1 { text-align: center; }
+        .screenshot { margin: 2rem auto; max-width: 800px; text-align: center; }
+        img { max-width: 100%; height: auto; border: 1px solid #ccc; }
+        p { font-size: 0.9rem; color: #555; }
     </style>
 </head>
 <body>
+<h1>HumanTag SDK – Demo Screenshots</h1>
 
-<header>
-    <h1>HumanTag SDK</h1>
-    <p>Patent-pending biometric watermarking system for cryptographic verification of real-time human presence in digital media.</p>
-    <div class="buttons">
-        <a class="button" href="https://github.com/agibrahimmdphd/humantag-sdk">GitHub Repo</a>
-        <a class="button" href="https://github.com/agibrahimmdphd/humantag-sdk/releases/tag/v1.3.2">Download SDK v1.3.2</a>
-    </div>
-</header>
-
-<div class="content">
-    <h2>🔐 What is HumanTag?</h2>
-    <p>HumanTag is an SDK that generates cryptographically verifiable biometric watermarks in real-time media streams. Designed to defeat deepfakes, ensure forensic transparency, and protect digital integrity — HumanTag authenticates human presence using real-time physiological signals.</p>
-
-    <h2>🚀 Features</h2>
-    <ul>
-        <li>Biometric signal simulation (PPG, GSR, EKG, genomic, proteomic)</li>
-        <li>Entropy analysis and spoof detection</li>
-        <li>Configurable entropy threshold gating</li>
-        <li>ECDSA cryptographic signature</li>
-        <li>Payload encryption and nonce validation</li>
-        <li>Secure watermark embedding + verification pipeline</li>
-    </ul>
-
-    <h2>📊 Scientific Tools</h2>
-    <ul>
-        <li>Entropy distribution simulation: <code>tools/entropy_distribution_simulator.py</code></li>
-        <li>Scientific validation plan: <code>tools/entropy_benchmark_plan.md</code></li>
-        <li>Plot: <code>entropy_distribution_simulation.png</code></li>
-    </ul>
-
-    <h2>⚙️ Quick Start</h2>
-    <pre><code>git clone https://github.com/agibrahimmdphd/humantag-sdk.git
-cd humantag-sdk
-python3 examples/demo_full_pipeline_verbose.py</code></pre>
-
-    <h2>🖼 Live Demo Outputs</h2>
-    <img src="screenshots/biometric_signal_preview.png" alt="Biometric Signal Preview">
-    <p>Sample biometric signals (PPG, GSR, EKG)</p>
-
-    <img src="screenshots/verified_output_cli.png" alt="Verification Result CLI">
-    <p>Command-line verification result: <strong>✅ Verified = True</strong></p>
-
-    <img src="screenshots/entropy_chart_sample.png" alt="Entropy Distribution Chart">
-    <p>Entropy score distribution showing real vs. spoofed biometric data</p>
-
-    <img src="screenshots/watermark_payload_structure.png" alt="Watermark Payload JSON">
-    <p>Signed biometric watermark payload structure</p>
-
-    <h2>📄 License</h2>
-    <p>This SDK is open source under the <strong>Apache 2.0 License</strong> and safe for enterprise and research use.</p>
+<div class="screenshot">
+  <img src="data:image/png;base64,TW9jayBpbWFnZSBwbGFjZWhvbGRlcg==" alt="biometric_signal_preview.png">
+  <p>Sample biometric signals (PPG, GSR, EKG)</p>
 </div>
 
-<footer>
-    © 2025 HumanTag Project · Apache 2.0 Licensed · Patent Pending
-</footer>
+<div class="screenshot">
+  <img src="data:image/png;base64,TW9jayBpbWFnZSBwbGFjZWhvbGRlcg==" alt="verification_result_cli.png">
+  <p>Command-line verification result: ✅ Verified = True</p>
+</div>
 
-</body>
-</html>
+<div class="screenshot">
+  <img src="data:image/png;base64,TW9jayBpbWFnZSBwbGFjZWhvbGRlcg==" alt="entropy_distribution_chart.png">
+  <p>Entropy score distribution showing real vs. spoofed biometric data</p>
+</div>
+
+<div class="screenshot">
+  <img src="data:image/png;base64,TW9jayBpbWFnZSBwbGFjZWhvbGRlcg==" alt="watermark_payload_json.png">
+  <p>Signed biometric watermark payload structure</p>
+</div>
+</body></html>
