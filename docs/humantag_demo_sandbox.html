@@ -1,0 +1,67 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>HumanTag Demo Sandbox</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #f9f9f9; color: #333; max-width: 900px; margin: 0 auto; padding: 2em; }
+    h1 { color: #1a73e8; }
+    .section { margin-bottom: 2em; }
+    textarea { width: 100%; height: 160px; padding: 1em; font-family: monospace; background: #f4f4f4; }
+    button { background: #1a73e8; color: white; border: none; padding: 0.7em 1.5em; font-size: 1em; border-radius: 4px; cursor: pointer; }
+    .result { background: #e6f4ea; border-left: 4px solid #34a853; padding: 1em; margin-top: 1em; }
+    .entropy-bar { height: 20px; background: #d0d0d0; border-radius: 4px; overflow: hidden; }
+    .entropy-fill { height: 100%; background: #34a853; text-align: right; padding-right: 6px; color: white; font-size: 0.9em; line-height: 20px; }
+  </style>
+</head>
+<body>
+  <h1>HumanTag Demo Sandbox</h1>
+  <p>This interactive demo simulates the HumanTag verification process with biometric entropy, signed payload, and watermark verification.</p>
+
+  <div class="section">
+    <button onclick="runDemo()">Generate Biometric Payload</button>
+  </div>
+
+  <div class="section" id="entropySection" style="display:none;">
+    <h3>Entropy Score</h3>
+    <div class="entropy-bar">
+      <div class="entropy-fill" id="entropyFill" style="width: 0%">0%</div>
+    </div>
+  </div>
+
+  <div class="section" id="payloadSection" style="display:none;">
+    <h3>Signed Payload</h3>
+    <textarea id="payloadOutput" readonly></textarea>
+  </div>
+
+  <div class="section" id="verificationSection" style="display:none;">
+    <h3>Verification</h3>
+    <div class="result">✅ Verified = True</div>
+  </div>
+
+  <script>
+    function runDemo() {
+      const entropy = Math.floor(Math.random() * 30) + 70;
+      const payload = {
+        device_id: "HT-2025",
+        timestamp: new Date().toISOString(),
+        entropy_score: entropy / 100,
+        nonce: Math.random().toString(36).substring(2, 10),
+        signature: "a9f8c2e7...bc3f29e2",
+        verified: true
+      };
+
+      document.getElementById("entropySection").style.display = "block";
+      document.getElementById("payloadSection").style.display = "block";
+      document.getElementById("verificationSection").style.display = "block";
+
+      const fill = document.getElementById("entropyFill");
+      fill.style.width = entropy + "%";
+      fill.textContent = entropy + "%";
+
+      document.getElementById("payloadOutput").value = JSON.stringify(payload, null, 2);
+    }
+  </script>
+</body>
+</html>
