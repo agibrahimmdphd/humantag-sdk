@@ -1,3 +1,8 @@
+import time
+import random
+
 class NonceManager:
-    used = set()
-    def is_fresh(self, n): return n not in self.used
+    def get_nonce(self):
+        # Simulates a unique, timestamp-based nonce
+        return f"nonce_{int(time.time())}_{random.randint(1000,9999)}"
+
