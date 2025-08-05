@@ -3,58 +3,57 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>HumanTag SDK · Patent Pending</title>
+  <title>HumanTag SDK · Biometric Watermarking & Verification</title>
   <style>
     body { font-family: Arial, sans-serif; max-width: 900px; margin: 0 auto; padding: 2em; background: #fefefe; color: #333; }
-    h1 { color: #1a73e8; }
-    h2 { margin-top: 2em; }
+    h1, h2 { color: #1a73e8; }
+    h3 { margin-top: 1.5em; }
     img { max-width: 100%; margin: 1em 0; border: 1px solid #ccc; }
     pre { background: #f4f4f4; padding: 1em; overflow-x: auto; }
-    footer { font-size: 0.9em; margin-top: 4em; color: #666; }
+    ul { padding-left: 1.2em; }
+    footer { font-size: 0.9em; margin-top: 4em; color: #666; text-align: center; }
   </style>
 </head>
 <body>
   <h1>HumanTag SDK v1.3.2</h1>
   <p><strong>Biometric Watermarking & Cryptographic Media Verification SDK</strong></p>
-  <p><strong>Apache 2.0 Licensed · Patent Pending</strong></p>
+  <p>Apache 2.0 Licensed · Patent Pending</p>
 
-  <h2>🔍 Overview</h2>
-  <p>HumanTag is a modular SDK that authenticates real-time human presence in recorded media using biometric entropy, cryptographic signing, and watermark embedding. Designed for wearables, mobile, embedded, and cloud devices.</p>
+  <h2>Overview</h2>
+  <p>HumanTag is a modular SDK for real-time biometric authentication and media integrity. It embeds cryptographically signed biometric watermarks directly into digital content (video, audio, or metadata) to verify that a real human was present at the moment of recording.</p>
 
-  <h2>💡 Key Features</h2>
+  <h2>Features</h2>
   <ul>
-    <li>Entropy-verified biometric signals (PPG, GSR, EKG)</li>
-    <li>Cryptographically signed payloads (ECDSA)</li>
-    <li>Watermark embedding & verification logic</li>
-    <li>SDK modules for signing, spoof detection, entropy scoring</li>
+    <li>Biometric signal analysis: PPG, GSR, EKG</li>
+    <li>Entropy scoring and spoof resistance</li>
+    <li>Secure signature and payload encryption</li>
+    <li>Watermark embedding and public-key verification</li>
+    <li>CLI tools, SDK modules, and JSON output</li>
   </ul>
 
-  <h2>🖼️ Live Demo Outputs</h2>
+  <h2>Demo Screenshots</h2>
 
-  <h3>1. Biometric Signal Preview</h3>
-  <img src="assets/screenshots/1_biometric_signal_preview.png" alt="Biometric Signal Preview">
+  <h3>Biometric Signal Summary (Card)</h3>
+  <img src="assets/screenshots/watermark_payload_card.png" alt="HumanTag biometric summary card">
 
-  <h3>2. Verification CLI Output</h3>
-  <img src="assets/screenshots/2_verification_result_cli.png" alt="Verification Result CLI">
+  <h3>Watermark Payload (Simplified JSON)</h3>
+  <img src="assets/screenshots/watermark_payload_json_simplified.png" alt="HumanTag simplified watermark JSON">
 
-  <h3>3. Entropy Score Distribution</h3>
-  <img src="assets/screenshots/3_entropy_distribution_chart.png" alt="Entropy Distribution Chart">
+  <h3>Signature Status Verification</h3>
+  <img src="assets/screenshots/signature_status_badge.png" alt="HumanTag signature verification badge">
 
-  <h3>4. Watermark Payload JSON</h3>
-  <img src="assets/screenshots/4_watermark_payload_json.png" alt="Watermark Payload JSON">
-
-  <h2>📦 Get Started</h2>
+  <h2>Usage</h2>
   <pre>
 git clone https://github.com/agibrahimmdphd/humantag-sdk.git
 cd humantag-sdk
 python3 examples/demo_full_pipeline.py
   </pre>
 
-  <h2>📄 License</h2>
-  <p>This project is licensed under the Apache License 2.0 — see the <a href="https://github.com/agibrahimmdphd/humantag-sdk/blob/main/LICENSE">LICENSE</a> file for details.</p>
+  <h2>License</h2>
+  <p>This project is licensed under the Apache License 2.0. See the <a href="https://github.com/agibrahimmdphd/humantag-sdk/blob/main/LICENSE">LICENSE</a> file for details.</p>
 
   <footer>
-    &copy; 2025 HumanTag Project. All rights reserved.
+    &copy; 2025 HumanTag Project · All rights reserved
   </footer>
 </body>
 </html>
