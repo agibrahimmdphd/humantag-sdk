@@ -1,0 +1,77 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>HumanTag SDK Sandbox</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 2rem;
+      background: #f4f4f9;
+      color: #333;
+    }
+    h1 {
+      color: #2c3e50;
+    }
+    .btn {
+      padding: 10px 20px;
+      background-color: #0366d6;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .btn:hover {
+      background-color: #024fa1;
+    }
+    pre {
+      background: #eee;
+      padding: 1rem;
+      border-radius: 5px;
+      overflow-x: auto;
+    }
+    .legend {
+      margin-top: 2rem;
+    }
+    .legend li {
+      margin-bottom: 5px;
+    }
+  </style>
+</head>
+<body>
+  <h1>HumanTag SDK Sandbox</h1>
+  <p>This demo randomly generates a simulated biometric payload in real-time.</p>
+  <button class="btn" onclick="generatePayload()">Generate Random Payload</button>
+
+  <h2>Payload Output</h2>
+  <pre id="output"></pre>
+
+  <h2>Field Legend</h2>
+  <ul class="legend">
+    <li><strong>device_id</strong>: ID of the HumanTag capture device</li>
+    <li><strong>entropy_score</strong>: Combined entropy from PPG, GSR, and EKG</li>
+    <li><strong>timestamp</strong>: When the signal was captured</li>
+    <li><strong>signature</strong>: Simulated cryptographic signature</li>
+    <li><strong>watermark</strong>: Verification tag embedded</li>
+  </ul>
+
+  <script>
+    function generatePayload() {
+      const ppg = Math.random().toFixed(2);
+      const gsr = Math.random().toFixed(2);
+      const ekg = Math.random().toFixed(2);
+      const entropy = ((+ppg + +gsr + +ekg) / 3).toFixed(2);
+      const timestamp = new Date().toISOString();
+      const payload = {
+        device_id: "HT-001",
+        entropy_score: +entropy,
+        timestamp: timestamp,
+        signature: "(simulated signature)",
+        watermark: "HT-VALID-2025"
+      };
+      document.getElementById("output").textContent = JSON.stringify(payload, null, 2);
+    }
+  </script>
+</body>
+</html>
