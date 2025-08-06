@@ -1,1 +1,101 @@
-<!DOCTYPE html><html><head><title>HumanTag Sandbox</title></head><body><h1>HumanTag Demo</h1><p>This is a placeholder for the updated HumanTag sandbox.</p></body></html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>HumanTag SDK – Demo Sandbox</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 2rem;
+      background-color: #f4f4f9;
+      color: #333;
+    }
+    h1 {
+      color: #2c3e50;
+    }
+    .container {
+      max-width: 700px;
+      margin: auto;
+    }
+    .result-box {
+      background: #fff;
+      border: 1px solid #ddd;
+      padding: 20px;
+      border-radius: 8px;
+      margin-top: 20px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    }
+    .payload-entry {
+      font-family: monospace;
+      font-size: 14px;
+      margin: 8px 0;
+    }
+    .legend {
+      font-size: 13px;
+      color: #555;
+      margin-top: 10px;
+    }
+    button {
+      background-color: #0366d6;
+      color: white;
+      padding: 10px 20px;
+      font-size: 16px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #024fa1;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>HumanTag SDK – Demo Sandbox</h1>
+    <p>This sandbox generates a simulated biometric payload for media verification.</p>
+    <button onclick="generatePayload()">Generate Random Payload</button>
+
+    <div class="result-box" id="output" style="display:none;">
+      <div class="payload-entry" id="timestamp"></div>
+      <div class="payload-entry" id="ppg"></div>
+      <div class="payload-entry" id="gsr"></div>
+      <div class="payload-entry" id="ekg"></div>
+      <div class="payload-entry" id="entropy"></div>
+      <div class="payload-entry" id="signature"></div>
+      <div class="payload-entry" id="verification"></div>
+      <div class="legend">
+        <strong>Legend:</strong><br>
+        PPG, GSR, EKG = Simulated biometric entropy values<br>
+        Verification = Based on entropy > 0.4 threshold
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function getRandom(min, max) {
+      return (Math.random() * (max - min) + min).toFixed(2);
+    }
+
+    function generatePayload() {
+      const ts = new Date().toISOString();
+      const ppg = getRandom(0.6, 1.2);
+      const gsr = getRandom(0.3, 1.0);
+      const ekg = getRandom(0.8, 1.4);
+      const entropy = ((parseFloat(ppg) + parseFloat(gsr) + parseFloat(ekg)) / 3).toFixed(2);
+      const isVerified = entropy > 0.4 ? "✅ Verified = TRUE" : "❌ Verification FAILED";
+      const signature = "sig_" + Math.random().toString(36).substring(2, 10);
+
+      document.getElementById("output").style.display = "block";
+      document.getElementById("timestamp").textContent = "Timestamp: " + ts;
+      document.getElementById("ppg").textContent = "PPG Entropy: " + ppg;
+      document.getElementById("gsr").textContent = "GSR Entropy: " + gsr;
+      document.getElementById("ekg").textContent = "EKG Entropy: " + ekg;
+      document.getElementById("entropy").textContent = "Avg. Entropy: " + entropy;
+      document.getElementById("signature").textContent = "Signature: " + signature;
+      document.getElementById("verification").textContent = "Verification: " + isVerified;
+    }
+  </script>
+</body>
+</html>
